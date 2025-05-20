@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Waling Guest House</title>
+<link rel="icon" type="image/x-icon" href="https://media-hosting.imagekit.io/d6cdfe076f0a4de9/favicon.ico?Expires=1839342735&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=qikqGNJGlgOlcp5kSYmKnpohzxAaxrF7G5bXFumHDTy89K3fJPIVIF1aYG-Ko1repcnQl66EQzPE3GjYR3pNANiyNuDXedLGeLwYvBO11kG2Dda-nvjgbtBh2Qzys37BVlVXvpbBaDyATlWVWiwuAKvYm9VjSlKG6MQf0IlLfAGiWkC~un2UDpDhPe9VqPOXVqDlb9Fpc6J9gWiAhdpcJNgTKnVwJ5L~JrlH6Id~cK98TcOVlGngfNMOpsBz-DMp76hcKJ7jQZvxXzjuDWA16PJrqsMDtei82nQL8QEvNf9mfd0KyN7OsjHUUi7AE4r5jLUbY5c2DDYIo-8jabxH3w__">
+<script src="https://cdn.tailwindcss.com/3.4.16"></script>
+<script>tailwind.config={theme:{extend:{colors:{primary:'#3176FF',secondary:'#FF9F1C'},borderRadius:{'none':'0px','sm':'2px',DEFAULT:'4px','md':'8px','lg':'12px','xl':'16px','2xl':'20px','3xl':'24px','full':'9999px','button':'4px'}}}}</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet">
+<style>
+:where([class^="ri-"])::before { content: "\f3c2"; }
+body {
+font-family: 'Poppins', sans-serif;
+scroll-behavior: smooth;
+}
+.hero-section {
+background-image: url('https://readdy.ai/api/search-image?query=A%20luxurious%20mountain%20guest%20house%20with%20traditional%20Nepali%20architecture%20nestled%20among%20lush%20green%20hills%20with%20snow-capped%20mountains%20in%20the%20background.%20The%20scene%20shows%20a%20beautiful%20sunrise%20with%20golden%20light%20illuminating%20the%20building.%20The%20guest%20house%20has%20wooden%20balconies%20with%20colorful%20flowers%2C%20stone%20pathways%2C%20and%20a%20welcoming%20entrance.%20The%20left%20side%20of%20the%20image%20has%20a%20smooth%20gradient%20that%20transitions%20into%20a%20clean%20white%20background%20for%20text%20overlay.&width=1920&height=1080&seq=1&orientation=landscape');
+background-size: cover;
+background-position: center;
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+-webkit-appearance: none;
+margin: 0;
+}
+.custom-checkbox {
+position: relative;
+display: inline-block;
+width: 20px;
+height: 20px;
+margin-right: 8px;
+}
+.custom-checkbox input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.checkmark {
+position: absolute;
+top: 0;
+left: 0;
+width: 20px;
+height: 20px;
+background-color: #fff;
+border: 2px solid #ddd;
+border-radius: 4px;
+}
+.custom-checkbox input:checked ~ .checkmark {
+background-color: #3176FF;
+border-color: #3176FF;
+}
+.checkmark:after {
+content: "";
+position: absolute;
+display: none;
+}
+.custom-checkbox input:checked ~ .checkmark:after {
+display: block;
+}
+.custom-checkbox .checkmark:after {
+left: 6px;
+top: 2px;
+width: 6px;
+height: 11px;
+border: solid white;
+border-width: 0 2px 2px 0;
+transform: rotate(45deg);
+}
+.custom-switch {
+position: relative;
+display: inline-block;
+width: 48px;
+height: 24px;
+}
+.custom-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.switch-slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 24px;
+}
+.switch-slider:before {
+position: absolute;
+content: "";
+height: 18px;
+width: 18px;
+left: 3px;
+bottom: 3px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .switch-slider {
+background-color: #3176FF;
+}
+input:checked + .switch-slider:before {
+transform: translateX(24px);
+}
+.custom-radio {
+position: relative;
+display: inline-block;
+width: 20px;
+height: 20px;
+margin-right: 8px;
+}
+.custom-radio input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.radio-mark {
+position: absolute;
+top: 0;
+left: 0;
+width: 20px;
+height: 20px;
+background-color: #fff;
+border: 2px solid #ddd;
+border-radius: 50%;
+}
+.custom-radio input:checked ~ .radio-mark {
+border-color: #3176FF;
+}
+.radio-mark:after {
+content: "";
+position: absolute;
+display: none;
+top: 4px;
+left: 4px;
+width: 8px;
+height: 8px;
+border-radius: 50%;
+background: #3176FF;
+}
+.custom-radio input:checked ~ .radio-mark:after {
+display: block;
+}
+.custom-range {
+-webkit-appearance: none;
+width: 100%;
+height: 6px;
+background: #ddd;
+border-radius: 3px;
+outline: none;
+}
+.custom-range::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 18px;
+height: 18px;
+background: #3176FF;
+border-radius: 50%;
+cursor: pointer;
+}
+.social-icons {
+position: fixed;
+right: 20px;
+top: 50%;
+transform: translateY(-50%);
+z-index: 100;
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+.social-icon {
+width: 40px;
+height: 40px;
+display: flex;
+align-items: center;
+justify-content: center;
+background-color: rgba(255, 255, 255, 0.9);
+border-radius: 50%;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+transition: all 0.3s ease;
+position: relative;
+}
+.social-icon:hover {
+transform: scale(1.1);
+}
+.social-icon i {
+font-size: 20px;
+transition: all 0.3s ease;
+}
+.social-icon:hover i {
+color: white;
+}
+.social-icon[data-platform="facebook"]:hover {
+background-color: #1877F2;
+}
+.social-icon[data-platform="instagram"]:hover {
+background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+}
+.social-icon[data-platform="twitter"]:hover {
+background-color: #1DA1F2;
+}
+.social-icon[data-platform="youtube"]:hover {
+background-color: #FF0000;
+}
+.social-icon[data-platform="linkedin"]:hover {
+background-color: #0A66C2;
+}
+.social-icon[data-platform="whatsapp"]:hover {
+background-color: #25D366;
+}
+.tooltip {
+position: absolute;
+left: -100px;
+background-color: rgba(0, 0, 0, 0.7);
+color: white;
+padding: 4px 8px;
+border-radius: 4px;
+font-size: 12px;
+opacity: 0;
+visibility: hidden;
+transition: all 0.3s ease;
+white-space: nowrap;
+}
+.social-icon:hover .tooltip {
+opacity: 1;
+visibility: visible;
+}
+@media (max-width: 768px) {
+.social-icons {
+position: fixed;
+top: auto;
+bottom: 20px;
+right: 50%;
+transform: translateX(50%);
+flex-direction: row;
+}
+.social-icon {
+width: 36px;
+height: 36px;
+}
+.social-icon i {
+font-size: 16px;
+}
+.tooltip {
+display: none;
+}
+}
+#liveChat {
+position: fixed;
+bottom: 20px;
+right: 20px;
+z-index: 1000;
+}
+#chatButton {
+width: 60px;
+height: 60px;
+border-radius: 50%;
+background-color: #3176FF;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+transition: all 0.3s ease;
+}
+#chatButton:hover {
+transform: scale(1.05);
+}
+#chatWindow {
+position: absolute;
+bottom: 70px;
+right: 0;
+width: 320px;
+height: 400px;
+background-color: white;
+border-radius: 12px;
+box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+display: none;
+overflow: hidden;
+flex-direction: column;
+}
+#chatHeader {
+background-color: #3176FF;
+color: white;
+padding: 16px;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+#chatMessages {
+flex: 1;
+padding: 16px;
+overflow-y: auto;
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+.message {
+max-width: 80%;
+padding: 10px 12px;
+border-radius: 12px;
+margin-bottom: 8px;
+word-wrap: break-word;
+}
+.message.received {
+background-color: #f0f2f5;
+align-self: flex-start;
+border-bottom-left-radius: 4px;
+}
+.message.sent {
+background-color: #e1f5fe;
+align-self: flex-end;
+border-bottom-right-radius: 4px;
+}
+#chatInput {
+display: flex;
+padding: 12px;
+border-top: 1px solid #eee;
+}
+#messageInput {
+flex: 1;
+border: 1px solid #ddd;
+border-radius: 20px;
+padding: 8px 12px;
+outline: none;
+}
+#sendButton {
+margin-left: 8px;
+width: 36px;
+height: 36px;
+border-radius: 50%;
+background-color: #3176FF;
+color: white;
+display: flex;
+align-items: center;
+justify-content: center;
+cursor: pointer;
+}
+.theme-switch-wrapper {
+display: flex;
+align-items: center;
+}
+.theme-switch {
+display: inline-block;
+position: relative;
+width: 60px;
+height: 30px;
+}
+.theme-switch input {
+opacity: 0;
+width: 0;
+height: 0;
+}
+.slider {
+position: absolute;
+cursor: pointer;
+top: 0;
+left: 0;
+right: 0;
+bottom: 0;
+background-color: #ccc;
+transition: .4s;
+border-radius: 30px;
+}
+.slider:before {
+position: absolute;
+content: "";
+height: 22px;
+width: 22px;
+left: 4px;
+bottom: 4px;
+background-color: white;
+transition: .4s;
+border-radius: 50%;
+}
+input:checked + .slider {
+background-color: #3176FF;
+}
+input:checked + .slider:before {
+transform: translateX(30px);
+}
+.slider:after {
+content: '☀️';
+position: absolute;
+left: 8px;
+top: 6px;
+font-size: 12px;
+}
+input:checked + .slider:after {
+content: '🌙';
+left: auto;
+right: 8px;
+}
+.dark-mode {
+background-color: #1a1a1a;
+color: #f5f5f5;
+}
+.dark-mode .bg-white {
+background-color: #2a2a2a;
+}
+.dark-mode .text-gray-700 {
+color: #e0e0e0;
+}
+.dark-mode .text-gray-600 {
+color: #d0d0d0;
+}
+.dark-mode .text-gray-500 {
+color: #c0c0c0;
+}
+.dark-mode .border-gray-200 {
+border-color: #3a3a3a;
+}
+.dark-mode .shadow-lg {
+box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+</style>
+</head>
+<body class="bg-grey-50">
+<!-- Social Media Icons -->
+<div class="social-icons">
+<a href="https://facebook.com/walinguesthouse" target="_blank" rel="noopener" class="social-icon" data-platform="facebook-line">
+<i class="ri-facebook-fill"></i>
+<span class="tooltip">Facebook</span>
+</a>
+<a href="https://instagram.com/walinguesthouse" target="_blank" rel="noopener" class="social-icon" data-platform="instagram">
+<i class="ri-instagram-line"></i>
+<span class="tooltip">Instagram</span>
+</a>
+<a href="https://twitter.com/walinguesthouse" target="_blank" rel="noopener" class="social-icon" data-platform="twitter">
+<i class="ri-twitter-x-line"></i>
+<span class="tooltip">Twitter</span>
+</a>
+<a href="https://youtube.com/walinguesthouse" target="_blank" rel="noopener" class="social-icon" data-platform="youtube">
+<i class="ri-youtube-line"></i>
+<span class="tooltip">YouTube</span>
+</a>
+<a href="https://linkedin.com/company/walinguesthouse" target="_blank" rel="noopener" class="social-icon" data-platform="linkedin">
+<i class="ri-linkedin-fill"></i>
+<span class="tooltip">LinkedIn</span>
+</a>
+<a href="https://wa.me/9779846123456" target="_blank" rel="noopener" class="social-icon" data-platform="whatsapp">
+<i class="ri-whatsapp-line"></i>
+<span class="tooltip">WhatsApp</span>
+</a>
+</div>
+<!-- Header -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+<div class="container mx-auto px-4 py-4 flex justify-between items-center">
+<a href="#" class="flex items-center gap-2">
+<img src="https://media-hosting.imagekit.io/d6cdfe076f0a4de9/favicon.ico?Expires=1839342735&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=qikqGNJGlgOlcp5kSYmKnpohzxAaxrF7G5bXFumHDTy89K3fJPIVIF1aYG-Ko1repcnQl66EQzPE3GjYR3pNANiyNuDXedLGeLwYvBO11kG2Dda-nvjgbtBh2Qzys37BVlVXvpbBaDyATlWVWiwuAKvYm9VjSlKG6MQf0IlLfAGiWkC~un2UDpDhPe9VqPOXVqDlb9Fpc6J9gWiAhdpcJNgTKnVwJ5L~JrlH6Id~cK98TcOVlGngfNMOpsBz-DMp76hcKJ7jQZvxXzjuDWA16PJrqsMDtei82nQL8QEvNf9mfd0KyN7OsjHUUi7AE4r5jLUbY5c2DDYIo-8jabxH3w__" alt="Waling Guest House Logo" class="w-8 h-8">
+<span class="text-2xl font-['arial'] text-primary">Waling Guest House</span>
+</a>
+<div class="hidden md:flex items-center space-x-8">
+<a href="#home" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
+<a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
+<a href="#menu" class="nav-link text-gray-700 hover:text-primary transition-colors">Menu</a>
+<a href="#gallery" class="nav-link text-gray-700 hover:text-primary transition-colors">Gallery</a>
+<a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors">Contact</a>
+<a href="#booking" class="nav-link bg-primary text-white px-6 py-2 !rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap">Book Now</a>
+<div class="theme-switch-wrapper ml-4">
+<label class="theme-switch">
+<input type="checkbox" id="themeSwitch">
+<span class="slider"></span>
+</label>
+</div>
+</div>
+<button id="mobileMenuButton" class="md:hidden flex items-center">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+<!-- Mobile Menu -->
+<div id="mobileMenu" class="md:hidden bg-white shadow-lg hidden">
+<div class="container mx-auto px-4 py-4 flex flex-col space-y-4">
+<a href="#home" class="nav-link text-gray-700 hover:text-primary transition-colors">Home</a>
+<a href="#about" class="nav-link text-gray-700 hover:text-primary transition-colors">About</a>
+<a href="#menu" class="nav-link text-gray-700 hover:text-primary transition-colors">Menu</a>
+<a href="#gallery" class="nav-link text-gray-700 hover:text-primary transition-colors">Gallery</a>
+<a href="#contact" class="nav-link text-gray-700 hover:text-primary transition-colors">Contact</a>
+<a href="#booking" class="nav-link bg-primary text-white px-6 py-2 !rounded-button hover:bg-blue-600 transition-colors text-center whitespace-nowrap">Book Now</a>
+<div class="theme-switch-wrapper flex justify-center mt-4">
+<label class="theme-switch">
+<input type="checkbox" id="themeSwitchMobile">
+<span class="slider"></span>
+</label>
+</div>
+</div>
+</div>
+</header>
+<main>
+<!-- Hero Section -->
+<section id="home" class="hero-section relative">
+<div class="absolute inset-0 bg-black bg-opacity-40"></div>
+<div class="container mx-auto px-4 py-32 relative z-10">
+<div class="max-w-2xl text-white">
+<h1 class="text-5xl font-bold mb-6">Experience Authentic Nepali Hospitality</h1>
+<p class="text-xl mb-8">Nestled in the beautiful hills of Waling, our guest house offers comfortable accommodations, delicious local cuisine, and breathtaking mountain views.</p>
+<a href="#booking" class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-blue-600 transition-colors inline-block text-lg font-medium whitespace-nowrap">Book Your Stay</a>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-green-100 p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-hotel-bed-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Comfortable Rooms</h3>
+<p class="text-gray-600">Our well-appointed rooms offer modern amenities while maintaining traditional Nepali charm.</p>
+</div>
+<div class="bg-purple-100 p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-restaurant-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Authentic Cuisine</h3>
+<p class="text-gray-600">Enjoy delicious local and international dishes prepared with fresh, locally-sourced ingredients.</p>
+</div>
+<div class="bg-pink-100 p-8 rounded-lg shadow-md text-center">
+<div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+<i class="ri-landscape-line text-primary text-2xl"></i>
+</div>
+<h3 class="text-xl font-semibold mb-3">Scenic Views</h3>
+<p class="text-gray-600">Wake up to breathtaking views of the Himalayan mountains and lush green valleys.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section id="about" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">About Waling Guest House</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+</div>
+<div class="grid md:grid-cols-2 gap-12 items-center">
+<div>
+<img src="https://readdy.ai/api/search-image?query=A%20traditional%20Nepali%20guest%20house%20building%20with%20wooden%20architecture%20and%20carved%20details.%20The%20building%20has%20multiple%20floors%20with%20balconies%20decorated%20with%20colorful%20flowers.%20Mountains%20are%20visible%20in%20the%20background%2C%20and%20the%20property%20has%20beautiful%20gardens%20with%20traditional%20Nepali%20elements.%20The%20image%20shows%20the%20exterior%20in%20warm%20daylight%20with%20a%20welcoming%20entrance%20and%20traditional%20Nepali%20flags.&width=600&height=400&seq=2&orientation=landscape" alt="Waling Guest House" class="rounded-lg shadow-lg w-full h-auto object-cover">
+</div>
+<div>
+<h3 class="text-2xl font-semibold mb-4">Our Story</h3>
+<p class="text-gray-600 mb-4">Established in 2010, Waling Guest House has been providing exceptional hospitality to travelers from around the world. Our family-run establishment takes pride in offering authentic Nepali experiences while ensuring modern comforts.</p>
+<h3 class="text-2xl font-semibold mb-4 mt-8">Location</h3>
+<p class="text-gray-600 mb-4">Located in the picturesque town of Waling in Syangja district, our guest house is nestled among the beautiful hills of western Nepal. We're conveniently situated just 30 minutes from Pokhara and offer easy access to many local attractions.</p>
+<h3 class="text-2xl font-semibold mb-4 mt-8">Our Services</h3>
+<ul class="text-gray-600 space-y-2">
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>24/7 reception and security</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Free Wi-Fi throughout the property</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Restaurant serving local and international cuisine</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Tour and trekking arrangements</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Airport pickup and drop-off services</span>
+</li>
+<li class="flex items-start">
+<i class="ri-check-line text-primary mr-2 mt-1"></i>
+<span>Laundry services</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Section -->
+<section id="menu" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">Our Menu</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+<p class="text-gray-600 mt-4 max-w-2xl mx-auto">Enjoy our delicious selection of authentic Nepali cuisine and international favorites, prepared with fresh, locally-sourced ingredients.</p>
+</div>
+<!-- Menu Tabs -->
+<div class="mb-8 flex justify-center">
+<div class="inline-flex p-1 bg-gray-100 rounded-full">
+<button class="menu-tab active px-6 py-2 rounded-full bg-primary text-white" data-tab="breakfast">Breakfast</button>
+<button class="menu-tab px-6 py-2 rounded-full" data-tab="lunch">Lunch</button>
+<button class="menu-tab px-6 py-2 rounded-full" data-tab="dinner">Dinner</button>
+<button class="menu-tab px-6 py-2 rounded-full" data-tab="drinks">Drinks</button>
+</div>
+</div>
+<!-- Menu Content -->
+<div class="menu-content" id="breakfast">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-gray-100 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Nepali Breakfast Set</h3>
+<p class="text-gray-600 mt-2">Traditional Nepali breakfast with sel roti, potato curry, and masala tea.</p>
+</div>
+<span class="text-primary font-semibold">NPR 350</span>
+</div>
+</div>
+<div class="bg-gray-100 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Continental Breakfast</h3>
+<p class="text-gray-600 mt-2">Assorted bread, jam, butter, eggs, and fresh fruits with coffee or tea.</p>
+</div>
+<span class="text-primary font-semibold">NPR 400</span>
+</div>
+</div>
+<div class="bg-gray-100 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Himalayan Porridge</h3>
+<p class="text-gray-600 mt-2">Warm oatmeal porridge with local honey, nuts, and seasonal fruits.</p>
+</div>
+<span class="text-primary font-semibold">NPR 250</span>
+</div>
+</div>
+<div class="bg-gray-100 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Eggs Benedict</h3>
+<p class="text-gray-600 mt-2">Poached eggs on toasted English muffin with hollandaise sauce.</p>
+</div>
+<span class="text-primary font-semibold">NPR 450</span>
+</div>
+</div>
+</div>
+</div>
+<div class="menu-content hidden" id="lunch">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-gray-50 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Dal Bhat Tarkari</h3>
+<p class="text-gray-600 mt-2">Traditional Nepali meal with rice, lentil soup, vegetable curry, pickle, and papadum.</p>
+</div>
+<span class="text-primary font-semibold">NPR 500</span>
+</div>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Chicken Momo</h3>
+<p class="text-gray-600 mt-2">Steamed dumplings filled with spiced chicken, served with tomato chutney.</p>
+</div>
+<span class="text-primary font-semibold">NPR 350</span>
+</div>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Vegetable Thukpa</h3>
+<p class="text-gray-600 mt-2">Tibetan noodle soup with mixed vegetables and herbs.</p>
+</div>
+<span class="text-primary font-semibold">NPR 300</span>
+</div>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Grilled Trout</h3>
+<p class="text-gray-600 mt-2">Locally sourced trout grilled with herbs and served with potato salad.</p>
+</div>
+<span class="text-primary font-semibold">NPR 650</span>
+</div>
+</div>
+</div>
+</div>
+<div class="menu-content hidden" id="dinner">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-gray-50 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Nepali Thali Set</h3>
+<p class="text-gray-600 mt-2">Complete Nepali dinner with rice, lentils, chicken curry, vegetables, yogurt, and pickle.</p>
+</div>
+<span class="text-primary font-semibold">NPR 650</span>
+</div>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Vegetable Biryani</h3>
+<p class="text-gray-600 mt-2">Fragrant rice cooked with mixed vegetables and aromatic spices.</p>
+</div>
+<span class="text-primary font-semibold">NPR 400</span>
+</div>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Butter Chicken</h3>
+<p class="text-gray-600 mt-2">Tender chicken in a rich, creamy tomato sauce, served with naan bread.</p>
+</div>
+<span class="text-primary font-semibold">NPR 550</span>
+</div>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Himalayan Trout Curry</h3>
+<p class="text-gray-600 mt-2">Fresh mountain trout cooked in a traditional Nepali curry sauce.</p>
+</div>
+<span class="text-primary font-semibold">NPR 700</span>
+</div>
+</div>
+</div>
+</div>
+<div class="menu-content hidden" id="drinks">
+<div class="grid md:grid-cols-2 gap-8">
+<div class="bg-gray-50 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Masala Chai</h3>
+<p class="text-gray-600 mt-2">Traditional spiced tea with milk, cardamom, cinnamon, and ginger.</p>
+</div>
+<span class="text-primary font-semibold">NPR 120</span>
+</div>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Fresh Fruit Juice</h3>
+<p class="text-gray-600 mt-2">Seasonal fresh fruit juices (orange, pineapple, watermelon, or mixed).</p>
+</div>
+<span class="text-primary font-semibold">NPR 200</span>
+</div>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Himalayan Coffee</h3>
+<p class="text-gray-600 mt-2">Locally grown coffee beans, freshly ground and brewed.</p>
+</div>
+<span class="text-primary font-semibold">NPR 150</span>
+</div>
+</div>
+<div class="bg-gray-50 p-6 rounded-lg shadow-md">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="text-xl font-semibold">Lassi</h3>
+<p class="text-gray-600 mt-2">Traditional yogurt drink, available in sweet, salted, or fruit flavors.</p>
+</div>
+<span class="text-primary font-semibold">NPR 180</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section id="gallery" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">Gallery</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+<p class="text-gray-600 mt-4 max-w-2xl mx-auto">Explore our beautiful property, comfortable rooms, delicious food, and the stunning surroundings of Waling.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=A%20cozy%20and%20elegant%20hotel%20room%20with%20traditional%20Nepali%20decorative%20elements.%20The%20room%20has%20wooden%20furniture%2C%20a%20comfortable%20bed%20with%20clean%20white%20linens%2C%20large%20windows%20with%20mountain%20views%2C%20warm%20lighting%2C%20and%20traditional%20Nepali%20artwork%20on%20the%20walls.%20The%20room%20looks%20spacious%2C%20clean%2C%20and%20inviting%20with%20modern%20amenities%20discreetly%20placed.&width=600&height=400&seq=3&orientation=landscape" alt="Guest Room" class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
+</div>
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=A%20beautiful%20restaurant%20interior%20with%20traditional%20Nepali%20design%20elements.%20The%20dining%20area%20has%20wooden%20tables%20and%20chairs%2C%20traditional%20decorations%2C%20warm%20lighting%20from%20pendant%20lamps%2C%20large%20windows%20with%20mountain%20views%2C%20and%20a%20cozy%20atmosphere.%20The%20space%20looks%20clean%2C%20elegant%2C%20and%20inviting%20with%20some%20traditional%20Nepali%20artwork%20on%20walls.&width=600&height=400&seq=4&orientation=landscape" alt="Restaurant" class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
+</div>
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=A%20beautifully%20presented%20traditional%20Nepali%20thali%20meal%20on%20a%20round%20metal%20plate.%20The%20plate%20contains%20small%20bowls%20of%20various%20colorful%20dishes%20including%20rice%2C%20lentil%20soup%20%28dal%29%2C%20vegetable%20curry%2C%20pickle%2C%20yogurt%2C%20and%20papadum.%20The%20food%20looks%20fresh%2C%20appetizing%2C%20and%20authentically%20prepared%2C%20served%20on%20a%20wooden%20table%20with%20traditional%20Nepali%20elements%20visible%20in%20the%20background.&width=600&height=400&seq=5&orientation=landscape" alt="Traditional Food" class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
+</div>
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=A%20stunning%20mountain%20landscape%20view%20from%20a%20guest%20house%20balcony%20or%20window.%20The%20scene%20shows%20majestic%20Himalayan%20mountains%20with%20snow-capped%20peaks%20in%20the%20background%2C%20lush%20green%20hills%20and%20valleys%20in%20the%20middle%20ground%2C%20and%20some%20traditional%20Nepali%20houses%20visible%20in%20the%20distance.%20The%20image%20captures%20the%20breathtaking%20natural%20beauty%20surrounding%20Waling%2C%20Nepal.&width=600&height=400&seq=6&orientation=landscape" alt="Mountain View" class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
+</div>
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=A%20modern%20bathroom%20in%20a%20guest%20house%20with%20clean%20white%20tiles%2C%20a%20glass%20shower%20enclosure%2C%20modern%20fixtures%2C%20a%20clean%20toilet%2C%20and%20sink%20with%20mirror.%20The%20bathroom%20has%20good%20lighting%2C%20appears%20spacious%20and%20spotlessly%20clean%20with%20some%20traditional%20Nepali%20decorative%20elements%20like%20a%20small%20potted%20plant%20or%20artwork.%20Towels%20are%20neatly%20arranged%2C%20and%20basic%20toiletries%20are%20provided.&width=600&height=400&seq=7&orientation=landscape" alt="Bathroom" class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
+</div>
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img src="https://readdy.ai/api/search-image?query=A%20beautiful%20garden%20area%20of%20a%20guest%20house%20with%20colorful%20flowers%2C%20well-maintained%20plants%2C%20comfortable%20outdoor%20seating%2C%20and%20mountain%20views.%20The%20garden%20has%20stone%20pathways%2C%20traditional%20Nepali%20decorative%20elements%2C%20and%20looks%20like%20a%20peaceful%20place%20to%20relax.%20Some%20traditional%20Nepali%20prayer%20flags%20can%20be%20seen%20adding%20color%20to%20the%20scene.&width=600&height=400&seq=8&orientation=landscape" alt="Garden" class="w-full h-64 object-cover object-top hover:scale-105 transition-transform duration-300">
+</div>
+</div>
+<div class="text-center mt-8">
+<button id="viewMoreGallery" class="bg-primary text-white px-6 py-2 !rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap">View More Photos</button>
+</div>
+</div>
+</section>
+<!-- Booking Section -->
+<section id="booking" class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">Book Your Stay</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+<p class="text-gray-600 mt-4 max-w-2xl mx-auto">Reserve your room at Waling Guest House and experience authentic Nepali hospitality.</p>
+</div>
+<div class="max-w-4xl mx-auto bg-gray-50 p-8 rounded-lg shadow-lg">
+<form id="bookingForm">
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label for="checkIn" class="block text-gray-700 mb-2">Check-in Date</label>
+<input type="date" id="checkIn" name="checkIn" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required min="2025-04-15">
+</div>
+<div>
+<label for="checkOut" class="block text-gray-700 mb-2">Check-out Date</label>
+<input type="date" id="checkOut" name="checkOut" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required min="2025-04-16">
+</div>
+<div>
+<label for="adults" class="block text-gray-700 mb-2">Adults</label>
+<div class="relative">
+<select id="adults" name="adults" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary appearance-none pr-8">
+<option value="1">1</option>
+<option value="2" selected>2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-500"></i>
+</div>
+</div>
+</div>
+<div>
+<label for="children" class="block text-gray-700 mb-2">Children</label>
+<div class="relative">
+<select id="children" name="children" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary appearance-none pr-8">
+<option value="0" selected>0</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-500"></i>
+</div>
+</div>
+</div>
+<div>
+<label for="roomType" class="block text-gray-700 mb-2">Room Type</label>
+<div class="relative">
+<select id="roomType" name="roomType" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary appearance-none pr-8">
+<option value="standard">Standard Room</option>
+<option value="deluxe">Deluxe Room</option>
+<option value="suite">Suite</option>
+<option value="family">Family Room</option>
+</select>
+<div class="absolute inset-y-0 right-0 flex items-center px-2 pointer-events-none">
+<i class="ri-arrow-down-s-line text-gray-500"></i>
+</div>
+</div>
+</div>
+<div>
+<label for="guests" class="block text-gray-700 mb-2">Total Guests</label>
+<input type="text" id="guests" name="guests" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary bg-gray-100" readonly value="2">
+</div>
+</div>
+<div class="mt-6">
+<label for="specialRequests" class="block text-gray-700 mb-2">Special Requests</label>
+<textarea id="specialRequests" name="specialRequests" rows="3" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" placeholder="Any special requests or requirements..."></textarea>
+</div>
+<div class="mt-6">
+<h3 class="text-xl font-semibold mb-4">Guest Information</h3>
+<div class="grid md:grid-cols-2 gap-6">
+<div>
+<label for="firstName" class="block text-gray-700 mb-2">First Name</label>
+<input type="text" id="firstName" name="firstName" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
+</div>
+<div>
+<label for="lastName" class="block text-gray-700 mb-2">Last Name</label>
+<input type="text" id="lastName" name="lastName" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
+</div>
+<div>
+<label for="email" class="block text-gray-700 mb-2">Email</label>
+<input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
+</div>
+<div>
+<label for="phone" class="block text-gray-700 mb-2">Phone</label>
+<input type="tel" id="phone" name="phone" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
+</div>
+</div>
+</div>
+<div class="mt-6">
+<h3 class="text-xl font-semibold mb-4">Payment Method</h3>
+<div class="space-y-4">
+<label class="flex items-center">
+<span class="custom-radio">
+<input type="radio" name="paymentMethod" value="creditCard" checked>
+<span class="radio-mark"></span>
+</span>
+<span class="ml-2 flex items-center">
+Credit Card
+<i class="ri-visa-fill ml-2 text-blue-700"></i>
+<i class="ri-mastercard-fill ml-1 text-red-500"></i>
+</span>
+</label>
+<label class="flex items-center">
+<span class="custom-radio">
+<input type="radio" name="paymentMethod" value="paypal">
+<span class="radio-mark"></span>
+</span>
+<span class="ml-2 flex items-center">
+PayPal
+<i class="ri-paypal-fill ml-2 text-blue-600"></i>
+</span>
+</label>
+<label class="flex items-center">
+<span class="custom-radio">
+<input type="radio" name="paymentMethod" value="esewa">
+<span class="radio-mark"></span>
+</span>
+<span class="ml-2">eSewa</span>
+</label>
+<label class="flex items-center">
+<span class="custom-radio">
+<input type="radio" name="paymentMethod" value="khalti">
+<span class="radio-mark"></span>
+</span>
+<span class="ml-2">Khalti</span>
+</label>
+</div>
+</div>
+<div class="mt-6">
+<label class="flex items-center">
+<span class="custom-checkbox">
+<input type="checkbox" name="terms" required>
+<span class="checkmark"></span>
+</span>
+<span class="ml-2 text-gray-700">I agree to the <a href="#" class="text-primary hover:underline">terms and conditions</a></span>
+</label>
+</div>
+<div class="mt-8">
+<button type="submit" class="w-full bg-primary text-white py-3 !rounded-button hover:bg-blue-600 transition-colors font-medium text-lg whitespace-nowrap">Complete Booking</button>
+</div>
+</form>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section id="contact" class="py-16 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">Contact Us</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+<p class="text-gray-600 mt-4 max-w-2xl mx-auto">Have questions or need more information? Reach out to us through any of the following channels.</p>
+</div>
+<div class="grid md:grid-cols-2 gap-12">
+<div>
+<form id="contactForm">
+<div class="mb-6">
+<label for="contactName" class="block text-gray-700 mb-2">Name</label>
+<input type="text" id="contactName" name="contactName" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
+</div>
+<div class="mb-6">
+<label for="contactEmail" class="block text-gray-700 mb-2">Email</label>
+<input type="email" id="contactEmail" name="contactEmail" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
+</div>
+<div class="mb-6">
+<label for="contactSubject" class="block text-gray-700 mb-2">Subject</label>
+<input type="text" id="contactSubject" name="contactSubject" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
+</div>
+<div class="mb-6">
+<label for="contactMessage" class="block text-gray-700 mb-2">Message</label>
+<textarea id="contactMessage" name="contactMessage" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required></textarea>
+</div>
+<button type="submit" class="bg-primary text-white px-8 py-3 !rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap">Send Message</button>
+</form>
+</div>
+<div>
+<div class="mb-8">
+<h3 class="text-xl font-semibold mb-4">Our Location</h3>
+<div class="h-64 bg-gray-200 rounded-lg overflow-hidden">
+<div style="background-image: url('https://public.readdy.ai/gen_page/map_placeholder_1280x720.png'); background-size: cover; background-position: center; width: 100%; height: 100%;"></div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+<i class="ri-map-pin-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium">Address</h4>
+<p class="text-gray-600">Waling-10, Syangja, Gandaki Province, Nepal</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+<i class="ri-phone-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium">Phone</h4>
+<p class="text-gray-600">+977 9846 123456</p>
+<p class="text-gray-600">+977 063 440789</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+<i class="ri-mail-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium">Email</h4>
+<p class="text-gray-600">info@walinguesthouse.com</p>
+<p class="text-gray-600">booking@walinguesthouse.com</p>
+</div>
+</div>
+<div class="flex items-start">
+<div class="w-10 h-10 flex items-center justify-center bg-blue-100 rounded-full mr-4">
+<i class="ri-time-line text-primary"></i>
+</div>
+<div>
+<h4 class="font-medium">Hours</h4>
+<p class="text-gray-600">Reception: 24/7</p>
+<p class="text-gray-600">Restaurant: 6:00 AM - 10:00 PM</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-16 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">Guest Reviews</h2>
+<div class="w-24 h-1 bg-primary mx-auto"></div>
+<p class="text-gray-600 mt-4 max-w-2xl mx-auto">See what our guests have to say about their experience at Waling Guest House.</p>
+</div>
+<div class="grid md:grid-cols-3 gap-8">
+<div class="bg-gray-50 p-8 rounded-lg shadow-md">
+<div class="flex text-yellow-400 mb-4">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<p class="text-gray-600 mb-6">"Our stay at Waling Guest House was exceptional. The staff was incredibly friendly and helpful, the rooms were clean and comfortable, and the food was delicious. The mountain views from our room were breathtaking. We'll definitely be back!"</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20middle-aged%20European%20man%20with%20short%20brown%20hair%20and%20a%20friendly%20smile%2C%20wearing%20a%20casual%20button-up%20shirt%2C%20against%20a%20neutral%20background.%20The%20image%20is%20well-lit%20with%20soft%20lighting%2C%20showing%20a%20clear%20face%20with%20natural%20expression.%20The%20photo%20has%20a%20professional%20quality%20suitable%20for%20a%20testimonial%20or%20review.&width=100&height=100&seq=9&orientation=squarish" alt="Michael Johnson" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-medium">Michael Johnson</h4>
+<p class="text-gray-500 text-sm">United Kingdom</p>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg shadow-md">
+<div class="flex text-yellow-400 mb-4">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+</div>
+<p class="text-gray-600 mb-6">"What a hidden gem! The location is perfect - close enough to Pokhara but away from the tourist crowds. The traditional Nepali breakfast was a highlight of our stay, and the staff went above and beyond to make our visit special. Highly recommend!"</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20Asian%20woman%20with%20long%20black%20hair%20and%20a%20warm%20smile%2C%20wearing%20a%20casual%20professional%20outfit%2C%20against%20a%20neutral%20background.%20The%20image%20is%20well-lit%20with%20soft%20lighting%2C%20showing%20a%20clear%20face%20with%20natural%20expression.%20The%20photo%20has%20a%20professional%20quality%20suitable%20for%20a%20testimonial%20or%20review.&width=100&height=100&seq=10&orientation=squarish" alt="Sarah Chen" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-medium">Sarah Chen</h4>
+<p class="text-gray-500 text-sm">Australia</p>
+</div>
+</div>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg shadow-md">
+<div class="flex text-yellow-400 mb-4">
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-fill"></i>
+<i class="ri-star-half-fill"></i>
+</div>
+<p class="text-gray-600 mb-6">"We stayed at Waling Guest House for three nights and loved every moment. The rooms are spacious and clean, the food is authentic and delicious, and the staff is incredibly hospitable. The views of the mountains from the property are simply stunning."</p>
+<div class="flex items-center">
+<div class="w-12 h-12 bg-gray-300 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20middle-aged%20Indian%20man%20with%20short%20black%20hair%20and%20glasses%2C%20wearing%20a%20casual%20button-up%20shirt%2C%20against%20a%20neutral%20background.%20The%20image%20is%20well-lit%20with%20soft%20lighting%2C%20showing%20a%20clear%20face%20with%20natural%20expression.%20The%20photo%20has%20a%20professional%20quality%20suitable%20for%20a%20testimonial%20or%20review.&width=100&height=100&seq=11&orientation=squarish" alt="Rajesh Patel" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-medium">Rajesh Patel</h4>
+<p class="text-gray-500 text-sm">India</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-16 bg-blue-50">
+<div class="container mx-auto px-4">
+<div class="max-w-3xl mx-auto text-center">
+<h2 class="text-3xl font-bold mb-4">Subscribe to Our Newsletter</h2>
+<p class="text-gray-600 mb-8">Stay updated with our latest offers, events, and travel tips for Waling and surrounding areas.</p>
+<form id="newsletterForm" class="flex flex-col sm:flex-row gap-4">
+<input type="email" placeholder="Your email address" class="flex-1 px-4 py-3 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary" required>
+<button type="submit" class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-blue-600 transition-colors whitespace-nowrap">Subscribe</button>
+</form>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid md:grid-cols-4 gap-8 mb-12">
+<div>
+<h3 class="text-xl font-semibold mb-4">Waling Guest House</h3>
+<p class="text-gray-400 mb-4">Experience authentic Nepali hospitality in the beautiful hills of Waling, Syangja.</p>
+<div class="flex space-x-4">
+<a href="https://facebook.com/walinguesthouse" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+<i class="ri-facebook-fill"></i>
+</a>
+<a href="https://instagram.com/walinguesthouse" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+<i class="ri-instagram-line"></i>
+</a>
+<a href="https://twitter.com/walinguesthouse" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+<i class="ri-twitter-x-line"></i>
+</a>
+<a href="https://youtube.com/walinguesthouse" target="_blank" rel="noopener" class="w-10 h-10 flex items-center justify-center bg-gray-700 rounded-full hover:bg-primary transition-colors">
+<i class="ri-youtube-line"></i>
+</a>
+</div>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4">Quick Links</h3>
+<ul class="space-y-2">
+<li><a href="#home" class="text-gray-400 hover:text-white transition-colors">Home</a></li>
+<li><a href="#about" class="text-gray-400 hover:text-white transition-colors">About Us</a></li>
+<li><a href="#menu" class="text-gray-400 hover:text-white transition-colors">Our Menu</a></li>
+<li><a href="#gallery" class="text-gray-400 hover:text-white transition-colors">Gallery</a></li>
+<li><a href="#booking" class="text-gray-400 hover:text-white transition-colors">Book Now</a></li>
+<li><a href="#contact" class="text-gray-400 hover:text-white transition-colors">Contact</a></li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4">Contact Info</h3>
+<ul class="space-y-3">
+<li class="flex items-start">
+<i class="ri-map-pin-line mt-1 mr-3 text-primary"></i>
+<span class="text-gray-400">Waling-10, Syangja, Gandaki Province, Nepal</span>
+</li>
+<li class="flex items-start">
+<i class="ri-phone-line mt-1 mr-3 text-primary"></i>
+<span class="text-gray-400">+977 9846 123456<br>+977 063 440789</span>
+</li>
+<li class="flex items-start">
+<i class="ri-mail-line mt-1 mr-3 text-primary"></i>
+<span class="text-gray-400">info@walinguesthouse.com<br>booking@walinguesthouse.com</span>
+</li>
+</ul>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-4">We Accept</h3>
+<div class="flex flex-wrap gap-3">
+<i class="ri-visa-fill text-3xl text-gray-400"></i>
+<i class="ri-mastercard-fill text-3xl text-gray-400"></i>
+<i class="ri-paypal-fill text-3xl text-gray-400"></i>
+<i class="ri-bank-card-fill text-3xl text-gray-400"></i>
+</div>
+<h3 class="text-xl font-semibold mt-6 mb-4">Languages</h3>
+<div class="flex space-x-3">
+<span class="text-gray-400">English</span>
+<span class="text-gray-400">Nepali</span>
+<span class="text-gray-400">Hindi</span>
+</div>
+</div>
+</div>
+<div class="border-t border-gray-700 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-400 mb-4 md:mb-0">© 2025 Waling Guest House. All rights reserved.</p>
+<p class="text-gray-400">Developed by: <a href="https://ramrajabastakoti.com.np" target="_blank" rel="noopener" class="text-primary hover:underline">Ramraja</a></p>
+</div>
+</div>
+</div>
+</footer>
+<!-- Live Chat Widget -->
+<div id="liveChat">
+<div id="chatButton">
+<i class="ri-message-3-line text-white text-2xl"></i>
+</div>
+<div id="chatWindow">
+<div id="chatHeader">
+<h3>Live Chat</h3>
+<button id="closeChat">
+<i class="ri-close-line"></i>
+</button>
+</div>
+<div id="chatMessages">
+<div class="message received">
+Hello! Welcome to Waling Guest House. How can we help you today?
+</div>
+</div>
+<div id="chatInput">
+<input type="text" id="messageInput" placeholder="Type your message...">
+<button id="sendButton">
+<i class="ri-send-plane-fill"></i>
+</button>
+</div>
+</div>
+</div>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+// Smooth scrolling for navigation links
+document.querySelectorAll('.nav-link').forEach(link => {
+  link.addEventListener('click', function(e) {
+    e.preventDefault();
+    const targetId = this.getAttribute('href');
+    const targetSection = document.querySelector(targetId);
+    if (targetSection) {
+      const headerHeight = document.querySelector('header').offsetHeight;
+      const targetPosition = targetSection.offsetTop - headerHeight;
+      window.scrollTo({
+        top: targetPosition,
+        behavior: 'smooth'
+      });
+      // Close mobile menu if open
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (mobileMenu && !mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.add('hidden');
+      }
+    }
+  });
+});
+// Active link highlighting
+function setActiveLink() {
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-link');
+  
+  let currentSection = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    const headerHeight = document.querySelector('header').offsetHeight;
+    if (window.scrollY >= sectionTop - headerHeight - 100) {
+      currentSection = '#' + section.getAttribute('id');
+    }
+  });
+  navLinks.forEach(link => {
+    link.classList.remove('text-primary');
+    if (link.getAttribute('href') === currentSection) {
+      link.classList.add('text-primary');
+    }
+  });
+}
+window.addEventListener('scroll', setActiveLink);
+window.addEventListener('load', setActiveLink);
+// Mobile Menu Toggle
+const mobileMenuButton = document.getElementById('mobileMenuButton');
+const mobileMenu = document.getElementById('mobileMenu');
+mobileMenuButton.addEventListener('click', function() {
+mobileMenu.classList.toggle('hidden');
+});
+// Menu Tabs
+const menuTabs = document.querySelectorAll('.menu-tab');
+const menuContents = document.querySelectorAll('.menu-content');
+menuTabs.forEach(tab => {
+tab.addEventListener('click', () => {
+// Remove active class from all tabs
+menuTabs.forEach(t => {
+t.classList.remove('active', 'bg-primary', 'text-white');
+});
+// Add active class to clicked tab
+tab.classList.add('active', 'bg-primary', 'text-white');
+// Hide all content
+menuContents.forEach(content => {
+content.classList.add('hidden');
+});
+// Show corresponding content
+const tabId = tab.getAttribute('data-tab');
+document.getElementById(tabId).classList.remove('hidden');
+});
+});
+// Booking Form - Calculate total guests
+const adultsSelect = document.getElementById('adults');
+const childrenSelect = document.getElementById('children');
+const guestsInput = document.getElementById('guests');
+function updateTotalGuests() {
+const adults = parseInt(adultsSelect.value);
+const children = parseInt(childrenSelect.value);
+guestsInput.value = adults + children;
+}
+adultsSelect.addEventListener('change', updateTotalGuests);
+childrenSelect.addEventListener('change', updateTotalGuests);
+// Form Submissions
+const bookingForm = document.getElementById('bookingForm');
+const contactForm = document.getElementById('contactForm');
+const newsletterForm = document.getElementById('newsletterForm');
+if (bookingForm) {
+bookingForm.addEventListener('submit', function(e) {
+e.preventDefault();
+alert('Booking submitted successfully! We will contact you shortly to confirm your reservation.');
+bookingForm.reset();
+});
+}
+if (contactForm) {
+contactForm.addEventListener('submit', function(e) {
+e.preventDefault();
+alert('Message sent successfully! We will get back to you as soon as possible.');
+contactForm.reset();
+});
+}
+if (newsletterForm) {
+newsletterForm.addEventListener('submit', function(e) {
+e.preventDefault();
+alert('Thank you for subscribing to our newsletter!');
+newsletterForm.reset();
+});
+}
+// View More Gallery Button
+const viewMoreGallery = document.getElementById('viewMoreGallery');
+if (viewMoreGallery) {
+viewMoreGallery.addEventListener('click', function() {
+alert('More photos will be displayed in a gallery modal. This feature is under development.');
+});
+}
+// Live Chat Widget
+const chatButton = document.getElementById('chatButton');
+const chatWindow = document.getElementById('chatWindow');
+const closeChat = document.getElementById('closeChat');
+const messageInput = document.getElementById('messageInput');
+const sendButton = document.getElementById('sendButton');
+const chatMessages = document.getElementById('chatMessages');
+chatButton.addEventListener('click', function() {
+chatWindow.style.display = chatWindow.style.display === 'flex' ? 'none' : 'flex';
+});
+closeChat.addEventListener('click', function() {
+chatWindow.style.display = 'none';
+});
+function sendMessage() {
+const message = messageInput.value.trim();
+if (message) {
+// Add user message
+const userMessageDiv = document.createElement('div');
+userMessageDiv.className = 'message sent';
+userMessageDiv.textContent = message;
+chatMessages.appendChild(userMessageDiv);
+// Clear input
+messageInput.value = '';
+// Auto-scroll to bottom
+chatMessages.scrollTop = chatMessages.scrollHeight;
+// Simulate response after a short delay
+setTimeout(() => {
+const responseDiv = document.createElement('div');
+responseDiv.className = 'message received';
+responseDiv.textContent = "Thank you for your message. Our staff will respond shortly. If you have any urgent queries, please call us at +977 9846 123456.";
+chatMessages.appendChild(responseDiv);
+// Auto-scroll to bottom
+chatMessages.scrollTop = chatMessages.scrollHeight;
+}, 1000);
+}
+}
+sendButton.addEventListener('click', sendMessage);
+messageInput.addEventListener('keypress', function(e) {
+if (e.key === 'Enter') {
+sendMessage();
+}
+});
+// Set minimum date for check-in and check-out
+const today = new Date().toISOString().split('T')[0];
+const checkIn = document.getElementById('checkIn');
+const checkOut = document.getElementById('checkOut');
+if (checkIn && checkOut) {
+checkIn.setAttribute('min', today);
+checkIn.addEventListener('change', function() {
+// Set minimum check-out date to be the check-in date
+const checkInDate = new Date(checkIn.value);
+const nextDay = new Date(checkInDate);
+nextDay.setDate(nextDay.getDate() + 1);
+const nextDayStr = nextDay.toISOString().split('T')[0];
+checkOut.setAttribute('min', nextDayStr);
+// If check-out date is before new check-in date, update it
+if (checkOut.value && new Date(checkOut.value) <= checkInDate) {
+checkOut.value = nextDayStr;
+}
+});
+}
+// Theme Switcher
+const themeSwitch = document.getElementById('themeSwitch');
+const themeSwitchMobile = document.getElementById('themeSwitchMobile');
+const body = document.body;
+function toggleDarkMode() {
+body.classList.toggle('dark-mode');
+const isDarkMode = body.classList.contains('dark-mode');
+// Sync both switches
+themeSwitch.checked = isDarkMode;
+themeSwitchMobile.checked = isDarkMode;
+// Save preference to localStorage
+localStorage.setItem('darkMode', isDarkMode);
+}
+// Check for saved theme preference
+const savedDarkMode = localStorage.getItem('darkMode') === 'true';
+if (savedDarkMode) {
+body.classList.add('dark-mode');
+themeSwitch.checked = true;
+themeSwitchMobile.checked = true;
+}
+themeSwitch.addEventListener('change', toggleDarkMode);
+themeSwitchMobile.addEventListener('change', toggleDarkMode);
+});
+</script>
+</body>
+</html>
